@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'seven-seg';
+  src: url('https://assets.codepen.io/5324539/DSEG14Classic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.chevron-arrow {
+  font-size: 1.5em;
+  animation-name: appear;
+  animation-duration: 4s;
+  text-align: center;
+  color: black;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none !important;
+}
+
+a:visited {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:active {
+  text-decoration: none !important;
+}
+
+@keyframes appear {
+   0% {
+     opacity: 0;
+   }
+   90% {
+     opacity: 0; 
+   }
+   100% {
+     opacity: 1;
+   }
+}
+
+#contact-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+outer-link {
+  color: white;
+}
+
+/* visited link */
+.outer-link:visited {
+  color: white;
+  font-weight: bolder;
+}
+
+/* mouse over link */
+.outer-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* selected link */
+.outer-link:active {
+  color: #DDD;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 150px; 
+  margin: -100px 0 0;
+}
+
+#projects {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.project-tile { /* projectile! :) */
+  height: 50vh;
+  width: 33.3%;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.project-image-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px 2px 0 0;
+}
+
+.project-tile .project-tile-name {
+  visibility: hidden;
+}
+
+.project-tile:hover .project-tile-name {
+  visibility: visible;
+  animation-name: easein;
+  animation-duration: 4s;
+}
+
+.project-tile-name {
+  width: 100%;
+  height: 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  padding-left: 5px;
+  position: absolute;
+  top: 45vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-tile-name:hover {
+  visibility: visible;
+  animation-name: easein;
+  animation-duration: 0.01s;
+}
+
+@keyframes easein {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+}
+
+.projects-container {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+#profile-link {
+  font-size: large;
+}
+
+.plus-icon {
+  margin:auto;
+  font-size: 7em;
+}
+
+.cursor-caret {
+  position: relative;
+  left: 2px;
+  color: grey;
+}
+
+.maya-background {
+  background-color: #73c2fb;
+}
+
+@media (max-width: 800px) {
+  .project-tile { /* projectile! :) */
+    width: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  .project-tile { /* projectile! :) */
+    height: 50vh;
+    width: 100%;
+  }
+}
